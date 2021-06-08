@@ -15,6 +15,7 @@ import com.bytedance.scenedemo.animation.SlideBackButtonDemoScene
 import com.bytedance.scenedemo.animation.TransitionDemo
 import android.widget.TextView
 import com.bytedance.scene.ktx.requireNavigationScene
+import com.bytedance.scenedemo.animation.fullsharedelement.FullSharedElementAnimationScene
 
 /**
  * Created by JiangQi on 8/9/18.
@@ -45,6 +46,10 @@ class AnimationListDemoScene : UserVisibleHintGroupScene() {
             getString(R.string.main_anim_btn_share_element),
             View.OnClickListener { requireNavigationScene().push(TransitionDemo::class.java) })
         addSpace(layout, 100)
+        addButton(
+                layout,
+                "新的共享动画",
+                View.OnClickListener { requireNavigationScene().push(FullSharedElementAnimationScene::class.java) })
         return layout
     }
 
